@@ -1,3 +1,8 @@
+"""
+This is my second Python Project
+So if there is any syntax erros please excuse :S
+"""
+
 print "Welcome to your Traviling Agent!"
 print "Traviling with us you can visit 3 locations. Charlotte, Tampa, Pittsburgh and Los Angeles."
 print "Your hotel costs is $140 per night and your car rent is 40 per day"
