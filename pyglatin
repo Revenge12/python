@@ -1,0 +1,21 @@
+"""
+Got this idea form code acadamy but simplified it a bit!
+This is my first project so enjoy!
+"""
+
+name = input("Please State A Word: ")
+pey = "ay"
+first_letter = name[0]
+second_letter = name[1]
+rest = name[2:len(name)]
+
+
+if name.isalpha():
+    print (second_letter.upper() + rest.lower() + first_letter.lower() + pey)
+    wait = input("Your word has been Translated")
+    print ("Press any key to continue")
+else:
+    print ("Not a vailid Word.")
+    print ("Program will self destrict in t - 5 seconds")
+    import time
+    time.sleep(1)
