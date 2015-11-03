@@ -1,0 +1,55 @@
+print "Welcome to your Traviling Agent!"
+print "Traviling with us you can visit 3 locations. Charlotte, Tampa, Pittsburgh and Los Angeles."
+print "Your hotel costs is $140 per night and your car rent is 40 per day"
+print "If you rent a car for more than 3 days you get $20 off the total price. And if you rent the car for 7 or more days get $50 off your total price"
+print "This Traveling Agent will work out all your costs inculding your Spending Money"
+print ""
+
+a = raw_input("Where do you want to go? ")
+b = input("How long do you want to go? ")
+c = input("What is your spending money? ")
+
+if a == "Charlotte":
+    place = 1
+elif a == "Tampa":
+    place = 2
+elif a == "Pittsburgh":
+    place = 3
+elif a == "Los Angeles":
+    place = 4
+else:
+    place = 5
+    
+def hotel_cost(nights):
+    return 140 * nights
+    
+def plane_ride_cost(city):
+    if city == 1:
+        return 183
+    elif city == 2:
+        return 220
+    elif city == 3:
+        return 222
+    elif city == 4:
+        return 475
+        
+def rental_car_cost(days):
+    cost = 40 * days
+    if days >= 7:
+        return cost - 50
+    elif days >= 3:
+        return cost - 20
+    else:
+        return cost
+    
+def trip_cost(city, days, spending_money):
+    return rental_car_cost(days) + hotel_cost(days) + plane_ride_cost(city) + spending_money
+
+if place == 5:
+    print "Sorry, we could not find that city in our database!"
+else:
+    print trip_cost(place, b, c)
+
+
+
+
